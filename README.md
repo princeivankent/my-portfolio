@@ -1,59 +1,175 @@
-# MyPortfolio
+# 🧑‍💻 Prince Ivan Kent Tiburcio --- Portfolio Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+### **A modern, fast, developer-focused portfolio built with Angular + Firebase Hosting**
 
-## Development server
+This repository contains my personal developer portfolio showcasing my 7
+years of full-stack experience, selected projects, work history, and
+services.\
+The goal is to present a clean and professional online presence that
+highlights my technical strengths in **Angular, NodeJS, .NET Core,
+Firebase, Ionic, and modern web technologies**.
 
-To start a local development server, run:
+------------------------------------------------------------------------
 
-```bash
+# 🚀 Features
+
+-   ⚡ Built with **Angular 18+**
+-   🎨 Clean, responsive UI (TailwindCSS optional)
+-   📄 Pages:
+    -   Home
+    -   About Me
+    -   Experience
+    -   Projects
+    -   Contact
+-   🧩 Reusable components (project cards, experience cards, navbar,
+    footer)
+-   🔥 Firebase Hosting deployment
+-   🚀 Optional: GitHub Pages deployment
+
+------------------------------------------------------------------------
+
+# 📁 Project Structure
+
+    /src
+     ├─ /app
+     │   ├─ core/               # Services, interfaces, constants
+     │   ├─ shared/             # Reusable minimal components
+     │   ├─ components/         # UI components (navbar, footer, cards, hero)
+     │   ├─ pages/
+     │   │   ├─ home/
+     │   │   ├─ about/
+     │   │   ├─ experience/
+     │   │   ├─ projects/
+     │   │   └─ contact/
+     │   ├─ app-routing.module.ts
+     │   └─ app.component.ts
+     ├─ assets/
+     │   └─ images/
+     └─ styles.scss
+
+------------------------------------------------------------------------
+
+# 🛠️ Tech Stack
+
+  Layer                Technology
+  -------------------- -----------------------------------------
+  Frontend Framework   Angular 18+
+  UI Styling           TailwindCSS (optional)
+  Deployment           Firebase Hosting OR GitHub Pages
+  Forms                Angular Forms / Reactive Forms
+  Contact Form         EmailJS or Firebase Function (optional)
+  Icons                Heroicons / FontAwesome
+
+------------------------------------------------------------------------
+
+# 📦 Installation & Development Guide
+
+## 1️⃣ Clone the project
+
+``` bash
+git clone https://github.com/<your-username>/prince-portfolio.git
+cd my-portfolio
+```
+
+## 2️⃣ Install dependencies
+
+``` bash
+npm install
+```
+
+## 3️⃣ Run the development server
+
+``` bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+------------------------------------------------------------------------
 
-## Code scaffolding
+# 🎨 UI Setup (Optional: TailwindCSS)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+``` bash
+ng add @ngneat/tailwind
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+------------------------------------------------------------------------
 
-```bash
-ng generate --help
+# 🌐 Routing Setup
+
+``` ts
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'experience', component: ExperienceComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: '**', redirectTo: '' }
+];
 ```
 
-## Building
+------------------------------------------------------------------------
 
-To build the project run:
+# 🧩 Reusable Components
 
-```bash
-ng build
+    ng g c components/navbar
+    ng g c components/footer
+    ng g c components/project-card
+    ng g c components/experience-card
+    ng g c components/hero
+
+------------------------------------------------------------------------
+
+# 📝 Page Content Guide
+
+## 🏠 Home Page
+
+Hero intro, CTA buttons.
+
+## 👤 About Page
+
+Background, philosophy, tech stack.
+
+## 💼 Experience Page
+
+Role-based experience cards.
+
+## 🧪 Projects Page
+
+Showcase Pasta & Pastries, AXP systems, CMS apps, Disney contributions,
+etc.
+
+## 📬 Contact Page
+
+Contact form + socials.
+
+------------------------------------------------------------------------
+
+# 🔥 Firebase Deployment
+
+``` bash
+npm install -g firebase-tools
+firebase login
+firebase init hosting
+ng build --configuration production
+firebase deploy
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+------------------------------------------------------------------------
 
-## Running unit tests
+# 🚀 GitHub Pages Deployment
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+``` bash
+ng add angular-cli-ghpages
+ng deploy --base-href=/my-portfolio/
 ```
 
-## Running end-to-end tests
+------------------------------------------------------------------------
 
-For end-to-end (e2e) testing, run:
+# 📌 Roadmap
 
-```bash
-ng e2e
-```
+Dark mode, blog, analytics, animations, filtering, Cloud Functions.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+------------------------------------------------------------------------
 
-## Additional Resources
+# 📝 License
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT License © 2025 Prince Ivan Kent Tiburcio
