@@ -11,7 +11,12 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(taskkill:*)",
-      "Bash(ng version:*)"
+      "Bash(ng version:*)",
+      "Bash(ng build:*)",
+      "Bash(npx angular-cli-ghpages:*)",
+      "Bash(NUL)",
+      "Bash(cat:*)",
+      "Bash(npm run build:prod:*)"
     ],
     "deny": [],
     "ask": []
