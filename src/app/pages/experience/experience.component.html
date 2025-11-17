@@ -1,1 +1,49 @@
-<p>experience works!</p>
+<section class="min-h-screen bg-dark-900 pt-24 pb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16 animate-slide-up">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+        Work <span class="gradient-text">Experience</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+        7 years of building scalable solutions across enterprise, financial, and logistics domains
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="space-y-8 relative pl-8">
+      <app-experience-card
+        *ngFor="let exp of experiences; let i = index"
+        [role]="exp.role"
+        [company]="exp.company"
+        [location]="exp.location"
+        [period]="exp.period"
+        [description]="exp.description"
+        [technologies]="exp.technologies"
+        [index]="i"
+        class="block animate-fade-in"
+        [style.animation-delay]="(i * 0.1) + 's'">
+      </app-experience-card>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+      <div class="glass rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold gradient-text mb-2">7+</div>
+        <div class="text-gray-400 text-sm">Years Experience</div>
+      </div>
+      <div class="glass rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold gradient-text mb-2">4</div>
+        <div class="text-gray-400 text-sm">Companies</div>
+      </div>
+      <div class="glass rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold gradient-text mb-2">15+</div>
+        <div class="text-gray-400 text-sm">Major Projects</div>
+      </div>
+      <div class="glass rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold gradient-text mb-2">10+</div>
+        <div class="text-gray-400 text-sm">Technologies</div>
+      </div>
+    </div>
+  </div>
+</section>
