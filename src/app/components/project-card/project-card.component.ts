@@ -13,4 +13,5 @@ export class ProjectCardComponent {
   @Input() technologies: string[] = [];
   @Input() category: string = '';
   @Input() featured: boolean = false;
+  @Input() link?: string;
 }
