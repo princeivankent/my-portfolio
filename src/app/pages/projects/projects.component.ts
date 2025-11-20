@@ -9,6 +9,7 @@ interface Project {
   technologies: string[];
   category: string;
   featured: boolean;
+  link?: string;
 }
 
 @Component({
@@ -95,6 +96,14 @@ export class ProjectsComponent {
       technologies: ['Laravel', 'PHP', 'MySQL', 'Barcode'],
       category: 'Internal Tools',
       featured: false
+    },
+    {
+      title: 'Pasta and Pastries',
+      description: 'Modern restaurant website featuring an elegant menu showcase, online ordering system, and responsive design for seamless dining experience across all devices.',
+      technologies: ['Angular', 'Firebase', 'Responsive Design', 'PWA'],
+      category: 'Web',
+      featured: false,
+      link: 'https://pasta-and-pastries.web.app/'
     }
   ];
 }
