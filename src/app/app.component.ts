@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SeoService } from './core/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,25 @@ import { FooterComponent } from './components/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  private seoService = inject(SeoService);
   title = 'my-portfolio';
+
+  ngOnInit(): void {
+    // Add structured data for the website and person
+    this.addStructuredData();
+  }
+
+  private addStructuredData(): void {
+    // Add Person and WebSite structured data
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@graph': [
+        this.seoService.getPersonStructuredData(),
+        this.seoService.getWebSiteStructuredData()
+      ]
+    };
+
+    this.seoService.addStructuredData(structuredData);
+  }
 }
