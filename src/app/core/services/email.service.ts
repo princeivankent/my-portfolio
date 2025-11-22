@@ -33,6 +33,7 @@ export class EmailService {
       const templateParams = {
         from_name: emailData.name,
         from_email: emailData.email,
+        reply_to: emailData.email,  // This sets the reply-to header
         subject: emailData.subject,
         message: emailData.message,
         to_name: 'Prince Ivan Kent Tiburcio', // Your name

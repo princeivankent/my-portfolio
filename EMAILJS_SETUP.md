@@ -23,29 +23,35 @@ You should have already signed up for EmailJS at [https://www.emailjs.com/](http
 ### 1.3 Create an Email Template
 1. Go to **Email Templates**
 2. Click **Create New Template**
-3. Use this template structure:
+3. **IMPORTANT:** Configure the template settings:
+   - **To Email:** your email (where you want to receive messages)
+   - **Reply-To:** `{{reply_to}}` ← This is crucial! When you click reply, it will go to the sender
+   - **Subject:** `Portfolio Contact: {{subject}}`
+   - **From Name:** Can be "Portfolio Contact Form" or your name
+
+4. Use this **Email Body** template:
 
 ```
-Subject: New Contact Form Submission: {{subject}}
+You have a new message from your portfolio contact form!
 
 From: {{from_name}}
 Email: {{from_email}}
+Subject: {{subject}}
 
 Message:
 {{message}}
 
 ---
-This message was sent from your portfolio contact form.
+You can reply directly to this email to respond to {{from_name}}.
 ```
 
-4. Make sure these variables are set in the template:
-   - `from_name`
-   - `from_email`
-   - `subject`
-   - `message`
-   - `to_name` (optional, defaults to your name)
+5. Make sure these variables are in your template:
+   - `{{from_name}}` - Sender's name
+   - `{{from_email}}` - Sender's email
+   - `{{reply_to}}` - Reply-to address (same as from_email)
+   - `{{subject}}` - Email subject
+   - `{{message}}` - Email message body
 
-5. Set the **To Email** to your email address (where you want to receive messages)
 6. Copy your **Template ID** (it looks like: `template_xxxxxxx`)
 
 ## Step 2: Configure Your Application
