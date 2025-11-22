@@ -74,7 +74,7 @@ export class ProjectsComponent implements OnInit {
       featured: false
     },
     {
-      title: 'cLog Contact Tracing App',
+      title: 'e-Log Contact Tracing App',
       description: 'Real-time contact tracing application for COVID-19 pandemic response, enabling efficient data capture and health monitoring.',
       technologies: ['Vue.js', 'Firebase', 'QR Code', 'Real-time Sync'],
       category: 'Mobile',

@@ -64,8 +64,8 @@ export class ExperienceComponent implements OnInit {
       period: '2019 - 2021',
       description: [
         'Collaborated with the team to build and maintain web and mobile apps using Vue.js, Firebase, and Android technologies',
-        'Contributed to developing custom CMS platforms (AYUN! and cLog) that reduced manual content updates by 60%',
-        'Worked with the team to create the AYUN! Asset Tracking App and cLog Contact Tracing App for real-time data capture',
+        'Contributed to developing custom CMS platforms (AYUN! and e-Log) that reduced manual content updates by 60%',
+        'Worked with the team to create the AYUN! Asset Tracking App and e-Log Contact Tracing App for real-time data capture',
         'Independently designed and launched a responsive website for Easy Homes Inc., boosting client engagement and online leads',
         'Resolved performance bottlenecks by optimizing frontend components and Firebase queries, improving app responsiveness by 40%'
       ],
