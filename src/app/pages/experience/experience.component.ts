@@ -25,10 +25,10 @@ export class ExperienceComponent {
       location: 'Makati City',
       period: '2022 - Present',
       description: [
-        'Contributed to enterprise-scale systems for Disney, delivering robust and scalable solutions using Angular, Node.js, and AWS',
-        'Developed the Garment Utilization System Replacement (GUSR) to streamline costume tracking and usage analytics across Disney parks',
-        'Built the Disney Dine Reservation System, enhancing guest dining experience through real-time availability and booking features',
-        'Collaborated with cross-functional teams to ensure system scalability, performance optimization, and compliance with technical standards'
+        'Contributed to enterprise-scale systems for Disney as part of a development team, delivering robust and scalable solutions using Angular, Node.js, and AWS',
+        'Collaborated on the Garment Utilization System Replacement (GUSR) to streamline costume tracking and usage analytics across Disney parks',
+        'Worked with the team to build the Disney Dine Reservation System, enhancing guest dining experience through real-time availability and booking features',
+        'Partnered with cross-functional teams to ensure system scalability, performance optimization, and compliance with technical standards'
       ],
       technologies: ['Angular', 'Node.js', 'AWS Lambda', 'WebAPI']
     },
@@ -38,10 +38,10 @@ export class ExperienceComponent {
       location: 'Las Piñas City',
       period: '2021 - 2022',
       description: [
-        'Developed full-stack logistics and financial solutions using Angular, .NET Core, and Ionic for AXP\'s global operations',
-        'Built the AXP Money Remittance Web App, enabling secure overseas-to-Philippines money transfers with real-time transaction tracking',
-        'Delivered the AXP Freight Management System (Web & Mobile) for managing deliveries and driver routes',
-        'Launched the standalone AXP Customer App for package tracking and service requests, improving customer engagement',
+        'Collaborated with the development team on full-stack logistics and financial solutions using Angular, .NET Core, and Ionic for AXP\'s global operations',
+        'Contributed to building the AXP Money Remittance Web App, enabling secure overseas-to-Philippines money transfers with real-time transaction tracking',
+        'Worked with the team to deliver the AXP Freight Management System (Web & Mobile) for managing deliveries and driver routes',
+        'Independently developed and launched the standalone AXP Customer App for package tracking and service requests, improving customer engagement',
         'Improved system performance and data integrity by optimizing SQL queries, backend APIs, and mobile responsiveness'
       ],
       technologies: ['Angular', 'Ionic Capacitor', '.NET Core', 'SQL']
@@ -52,10 +52,10 @@ export class ExperienceComponent {
       location: 'Cabuyao City',
       period: '2019 - 2021',
       description: [
-        'Built and maintained web and mobile apps using Vue.js, Firebase, and Android technologies',
-        'Developed custom CMS platforms (AYUN! and cLog) that reduced manual content updates by 60%',
-        'Created the AYUN! Asset Tracking App and cLog Contact Tracing App for real-time data capture',
-        'Launched a responsive website for Easy Homes Inc., boosting client engagement and online leads',
+        'Collaborated with the team to build and maintain web and mobile apps using Vue.js, Firebase, and Android technologies',
+        'Contributed to developing custom CMS platforms (AYUN! and cLog) that reduced manual content updates by 60%',
+        'Worked with the team to create the AYUN! Asset Tracking App and cLog Contact Tracing App for real-time data capture',
+        'Independently designed and launched a responsive website for Easy Homes Inc., boosting client engagement and online leads',
         'Resolved performance bottlenecks by optimizing frontend components and Firebase queries, improving app responsiveness by 40%'
       ],
       technologies: ['Vue.js', 'Firebase', 'NoSQL', 'Android', 'Java']
@@ -66,9 +66,9 @@ export class ExperienceComponent {
       location: 'Biñan City',
       period: '2018 - 2019',
       description: [
-        'Spearheaded development of multiple internal platforms including e-learning, fleet training, and request portals',
+        'Independently developed the e-learning platform while collaborating with the team on other internal platforms including fleet training and request portals',
         'Resolved legacy system issues by migrating code to Laravel and optimizing backend logic',
-        'Designed barcode-based system that streamlined canteen transactions and reduced manual logging errors by over 80%',
+        'Collaborated with the team to design a barcode-based system that streamlined canteen transactions and reduced manual logging errors by over 80%',
         'Coordinated with cross-functional teams to identify pain points and deliver tailored business solutions'
       ],
       technologies: ['Laravel', 'PHP', 'MySQL', 'JavaScript']
