@@ -1,0 +1,25 @@
+# Robots.txt for Prince Ivan Kent Tiburcio Portfolio
+# Allow all search engines to crawl the entire site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://princeivankent.github.io/my-portfolio/sitemap.xml
+
+# Crawl-delay (optional - adjust based on server capacity)
+# Crawl-delay: 10
+
+# Block access to sensitive or unnecessary paths (if any)
+# Disallow: /api/
+# Disallow: /admin/
+
+# Allow specific search engines (optional)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

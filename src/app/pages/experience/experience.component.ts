@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExperienceCardComponent } from '../../components/experience-card/experience-card.component';
+import { SeoService } from '../../core/services/seo.service';
 
 interface Experience {
   role: string;
@@ -17,7 +18,17 @@ interface Experience {
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit {
+  private seoService = inject(SeoService);
+
+  ngOnInit(): void {
+    this.seoService.updateMetadata({
+      title: 'Work Experience - Prince Ivan Kent Tiburcio | 7 Years in Full Stack Development',
+      description: 'Discover my 7-year journey in full-stack development, including roles at RCG IT (Disney projects), ATLAS Express Padala, Tawitech, and Isuzu Philippines. Expertise in Angular, Node.js, and .NET Core.',
+      keywords: 'Work Experience, Full Stack Developer Career, Disney Developer, Angular Developer Jobs, Node.js Experience, .NET Core Developer',
+      canonicalUrl: 'https://princeivankent.github.io/my-portfolio/experience'
+    });
+  }
   experiences: Experience[] = [
     {
       role: 'Angular/Node.js Developer',

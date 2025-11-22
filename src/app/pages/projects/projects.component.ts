@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProjectCardComponent } from '../../components/project-card/project-card.component';
+import { SeoService } from '../../core/services/seo.service';
 
 interface Project {
   title: string;
@@ -18,7 +19,17 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
+  private seoService = inject(SeoService);
+
+  ngOnInit(): void {
+    this.seoService.updateMetadata({
+      title: 'Projects Portfolio - Prince Ivan Kent Tiburcio | Enterprise Applications & Web Development',
+      description: 'Explore my portfolio of enterprise-scale applications including Disney systems, financial platforms, and logistics solutions. Built with Angular, Node.js, .NET Core, and modern technologies.',
+      keywords: 'Software Projects, Enterprise Applications, Disney Systems, Angular Projects, Node.js Applications, .NET Core Projects, Web Development Portfolio',
+      canonicalUrl: 'https://princeivankent.github.io/my-portfolio/projects'
+    });
+  }
   projects: Project[] = [
     {
       title: 'Disney Garment Utilization System (GUSR)',

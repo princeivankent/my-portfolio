@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EmailService } from '../../core/services/email.service';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +10,8 @@ import { EmailService } from '../../core/services/email.service';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  private seoService = inject(SeoService);
   formData = {
     name: '',
     email: '',
@@ -22,6 +24,15 @@ export class ContactComponent {
   errorMessage = '';
 
   constructor(private emailService: EmailService) {}
+
+  ngOnInit(): void {
+    this.seoService.updateMetadata({
+      title: 'Contact Me - Prince Ivan Kent Tiburcio | Let\'s Build Something Great',
+      description: 'Get in touch with Prince Ivan Kent Tiburcio for full-stack development opportunities, collaborations, or project inquiries. Available for Angular, Node.js, and .NET Core projects.',
+      keywords: 'Contact Full Stack Developer, Hire Angular Developer, Node.js Freelancer, .NET Core Developer Contact, Web Development Services',
+      canonicalUrl: 'https://princeivankent.github.io/my-portfolio/contact'
+    });
+  }
 
   async onSubmit() {
     if (this.isSubmitting) {
