@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SeoService } from './core/services/seo.service';
@@ -12,11 +13,23 @@ import { SeoService } from './core/services/seo.service';
 })
 export class AppComponent implements OnInit {
   private seoService = inject(SeoService);
+  private router = inject(Router);
   title = 'my-portfolio';
 
   ngOnInit(): void {
     // Add structured data for the website and person
     this.addStructuredData();
+
+    // Scroll to top on route change
+    this.setupScrollToTop();
+  }
+
+  private setupScrollToTop(): void {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
   }
 
   private addStructuredData(): void {
