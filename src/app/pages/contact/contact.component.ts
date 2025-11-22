@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { EmailService } from '../../core/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,22 +17,41 @@ export class ContactComponent {
     message: ''
   };
 
+  isSubmitting = false;
   submitted = false;
+  errorMessage = '';
 
-  onSubmit() {
-    // In a real application, you would send this data to a backend service
-    console.log('Form submitted:', this.formData);
-    this.submitted = true;
+  constructor(private emailService: EmailService) {}
 
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      this.submitted = false;
-      this.formData = {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      };
-    }, 3000);
+  async onSubmit() {
+    if (this.isSubmitting) {
+      return;
+    }
+
+    this.isSubmitting = true;
+    this.errorMessage = '';
+    this.submitted = false;
+
+    try {
+      await this.emailService.sendEmail(this.formData);
+      this.submitted = true;
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        this.submitted = false;
+        this.formData = {
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        };
+      }, 3000);
+    } catch (error) {
+      this.errorMessage = error instanceof Error
+        ? error.message
+        : 'Failed to send email. Please try again later.';
+    } finally {
+      this.isSubmitting = false;
+    }
   }
 }
