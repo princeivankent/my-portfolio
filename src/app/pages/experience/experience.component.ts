@@ -23,7 +23,7 @@ export class ExperienceComponent {
       role: 'Angular/Node.js Developer',
       company: 'RCG Information Technology',
       location: 'Makati City',
-      period: '2020 - Present',
+      period: '2022 - Present',
       description: [
         'Contributed to enterprise-scale systems for Disney, delivering robust and scalable solutions using Angular, Node.js, and AWS',
         'Developed the Garment Utilization System Replacement (GUSR) to streamline costume tracking and usage analytics across Disney parks',
@@ -36,7 +36,7 @@ export class ExperienceComponent {
       role: 'Full Stack Developer',
       company: 'ATLAS Express Padala, Inc.',
       location: 'Las Piñas City',
-      period: '2018 - 2020',
+      period: '2021 - 2022',
       description: [
         'Developed full-stack logistics and financial solutions using Angular, .NET Core, and Ionic for AXP\'s global operations',
         'Built the AXP Money Remittance Web App, enabling secure overseas-to-Philippines money transfers with real-time transaction tracking',
@@ -44,13 +44,13 @@ export class ExperienceComponent {
         'Launched the standalone AXP Customer App for package tracking and service requests, improving customer engagement',
         'Improved system performance and data integrity by optimizing SQL queries, backend APIs, and mobile responsiveness'
       ],
-      technologies: ['Angular', 'Ionic', '.NET Core', 'SQL']
+      technologies: ['Angular', 'Ionic Capacitor', '.NET Core', 'SQL']
     },
     {
       role: 'Mid Software Developer',
       company: 'Tawitech, Inc.',
       location: 'Cabuyao City',
-      period: '2017 - 2018',
+      period: '2019 - 2021',
       description: [
         'Built and maintained web and mobile apps using Vue.js, Firebase, and Android technologies',
         'Developed custom CMS platforms (AYUN! and cLog) that reduced manual content updates by 60%',
@@ -64,7 +64,7 @@ export class ExperienceComponent {
       role: 'Web Developer',
       company: 'Isuzu Philippines Corporation',
       location: 'Biñan City',
-      period: '2015 - 2017',
+      period: '2018 - 2019',
       description: [
         'Spearheaded development of multiple internal platforms including e-learning, fleet training, and request portals',
         'Resolved legacy system issues by migrating code to Laravel and optimizing backend logic',
