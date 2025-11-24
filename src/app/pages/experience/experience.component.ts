@@ -24,7 +24,7 @@ export class ExperienceComponent implements OnInit {
   ngOnInit(): void {
     this.seoService.updateMetadata({
       title: 'Work Experience - Prince Ivan Kent Tiburcio | 7 Years in Full Stack Development',
-      description: 'Discover my 7-year journey in full-stack development, including roles at RCG IT (Disney projects), ATLAS Express Padala, Tawitech, and Isuzu Philippines. Expertise in Angular, Node.js, and .NET Core.',
+      description: 'Discover my 7-year journey in full-stack development, including roles at Myridius (Disney projects), LOGO, Tawitech, and Isuzu Philippines. Expertise in Angular, Node.js, and .NET Core.',
       keywords: 'Work Experience, Full Stack Developer Career, Disney Developer, Angular Developer Jobs, Node.js Experience, .NET Core Developer',
       canonicalUrl: 'https://princeivankent.github.io/my-portfolio/experience'
     });
@@ -32,7 +32,7 @@ export class ExperienceComponent implements OnInit {
   experiences: Experience[] = [
     {
       role: 'Angular/Node.js Developer',
-      company: 'RCG Information Technology',
+      company: 'Myridius (formerly known as RCG)',
       location: 'Makati City',
       period: '2022 - Present',
       description: [
@@ -45,7 +45,7 @@ export class ExperienceComponent implements OnInit {
     },
     {
       role: 'Full Stack Developer',
-      company: 'ATLAS Express Padala, Inc.',
+      company: 'LOGO (formerly known as Atlas Express Padala)',
       location: 'Las Piñas City',
       period: '2021 - 2022',
       description: [
