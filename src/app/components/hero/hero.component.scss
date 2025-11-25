@@ -322,9 +322,7 @@
 
 // Responsive adjustments
 @media (max-width: 768px) {
-  .particle {
-    display: none; // Hide particles on mobile for performance
-  }
+  // Particles are now visible on mobile - they use GPU-accelerated CSS animations
 
   .custom-cursor,
   .custom-cursor-dot {
