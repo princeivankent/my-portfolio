@@ -158,8 +158,8 @@ firebase deploy
 # 🚀 GitHub Pages Deployment
 
 ``` bash
-ng add angular-cli-ghpages
-ng deploy --base-href=/my-portfolio/
+MSYS_NO_PATHCONV=1 npx ng build --configuration production --base-href=/my-portfolio/
+npx angular-cli-ghpages --dir=dist/my-portfolio/browser --branch=gh-pages --message="fix base href"
 ```
 
 ------------------------------------------------------------------------
