@@ -31,7 +31,7 @@ export class SeoService {
     description: 'Results-driven Full Stack Developer with 7 years of experience specializing in Angular, Node.js, .NET Core, and modern web technologies. View my portfolio of enterprise-scale applications.',
     keywords: 'Full Stack Developer, Angular Developer, Node.js, .NET Core, TypeScript, JavaScript, Web Development, Software Engineer, Prince Ivan Kent Tiburcio',
     ogType: 'website',
-    ogImage: 'https://princeivankent.github.io/my-portfolio/assets/og-image.jpg',
+    ogImage: 'https://princeivankent.github.io/my-portfolio/landing-page.png',
     twitterCard: 'summary_large_image'
   };
 
