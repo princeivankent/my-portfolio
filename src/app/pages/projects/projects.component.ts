@@ -24,24 +24,40 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetadata({
-      title: 'Projects Portfolio - Prince Ivan Kent Tiburcio | Enterprise Applications & Web Development',
-      description: 'Explore my portfolio of enterprise-scale applications including Disney systems, financial platforms, and logistics solutions. Built with Angular, Node.js, .NET Core, and modern technologies.',
-      keywords: 'Software Projects, Enterprise Applications, Disney Systems, Angular Projects, Node.js Applications, .NET Core Projects, Web Development Portfolio',
+      title: 'Projects Portfolio - Prince Ivan Kent Tiburcio | SaaS, POS, Inventory & Enterprise Apps',
+      description: 'Explore my portfolio of SaaS products, POS and inventory systems, enterprise applications, financial platforms, and logistics solutions built with Angular, Node.js, .NET Core, and modern technologies.',
+      keywords: 'SaaS Projects, POS System, Inventory System, Business Software, Angular Projects, Node.js Applications, Enterprise Applications, Web Development Portfolio',
       canonicalUrl: 'https://princeivankent.github.io/my-portfolio/projects'
     });
   }
   projects: Project[] = [
     {
-      title: 'Disney Garment Utilization System (GUSR)',
-      description: 'Enterprise-scale system for Disney parks to streamline costume tracking and usage analytics. Replaced legacy system and improved inventory accuracy across multiple park locations.',
-      technologies: ['Angular', 'Node.js', 'AWS Lambda', 'WebAPI'],
-      category: 'Enterprise',
-      featured: true
+      title: 'Benta App PH',
+      description: 'SaaS POS and inventory platform for Filipino retailers, covering fast checkout, stock tracking, branch transfers, customer credit, reports, receipt printing, subscriptions, and multi-branch operations.',
+      technologies: ['Angular', 'Node.js', 'Supabase/Postgres', 'SaaS', 'POS'],
+      category: 'SaaS',
+      featured: true,
+      link: 'https://bentaph.com'
+    },
+    {
+      title: 'Pasta and Pastries',
+      description: 'Modern restaurant website featuring an elegant menu showcase, online ordering system, and responsive design for seamless dining experience across all devices.',
+      technologies: ['Angular', 'Firebase', 'Responsive Design', 'PWA'],
+      category: 'Web',
+      featured: true,
+      link: 'https://pasta-and-pastries.web.app/'
     },
     {
       title: 'Disney Dine Reservation System',
       description: 'Real-time dining reservation platform enhancing guest experience with availability tracking, booking, and confirmation features across multiple Disney restaurant locations.',
       technologies: ['Angular', 'Node.js', 'AWS', 'Real-time APIs'],
+      category: 'Enterprise',
+      featured: true
+    },
+    {
+      title: 'Disney Garment Utilization System (GUSR)',
+      description: 'Enterprise-scale system for Disney parks to streamline costume tracking and usage analytics. Replaced legacy system and improved inventory accuracy across multiple park locations.',
+      technologies: ['Angular', 'Node.js', 'AWS Lambda', 'WebAPI'],
       category: 'Enterprise',
       featured: true
     },
@@ -107,14 +123,6 @@ export class ProjectsComponent implements OnInit {
       technologies: ['Laravel', 'PHP', 'MySQL', 'Barcode'],
       category: 'Internal Tools',
       featured: false
-    },
-    {
-      title: 'Pasta and Pastries',
-      description: 'Modern restaurant website featuring an elegant menu showcase, online ordering system, and responsive design for seamless dining experience across all devices.',
-      technologies: ['Angular', 'Firebase', 'Responsive Design', 'PWA'],
-      category: 'Web',
-      featured: false,
-      link: 'https://pasta-and-pastries.web.app/'
     }
   ];
 }
